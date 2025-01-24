@@ -1,13 +1,9 @@
-# Bidirectional Action Decoding
-
-This repo contains the official implementation of Bidirectional Action Decoding.
+# Guided Bidirectional Decoding
 
 > Bidirectional Decoding (BiD) samples multiple action chunks at each time step and searches for the optimal action based on two criteria:
 >   1. backward coherence, which favors actions close to the decision made in the previous time step
 >   2. forward contrast, which favors actions close to near-optimal long-horizon plans and far from sub-optimal short-horizon ones
-> 
-> By coupling decisions within and across action chunks, our method promotes strong temporal dependencies over multiple time steps while maintaining high reactivity to unexpected environment dynamcis.
-
+Here we implement guided diffusion for BID sampling to enhance efficiency, reduce latency required to achieve BID performance.
 ### Setup
 
 Install dependencies of the diffusion policy (~20 min)
@@ -64,7 +60,7 @@ sbatch script/sbatch_train.sh
 
 - pre-trained checkpoints
 ```
-cd -rf /iris/u/yuejliu/research/bid/ckpt <your_path>/bid/ckpt
+cd -rf /iris/u/rheamal/research/bid/ckpt <your_path>/bid/ckpt
 ```
 
 ### Acknowledgement
